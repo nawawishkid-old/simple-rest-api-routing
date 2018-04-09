@@ -4,27 +4,27 @@ You have to build or integrate database query system or ORM, e.g. Eloquent, for 
 
 ### Example usage
 ```php
-Route::get( '/api/test', function ($request) {
+Route::get('/api/test', function ($request) {
 	// do something with $request with GET method
 });
 
-Route::post( '/api/test', function ($request) {
+Route::post('/api/test', function ($request) {
 	// do something with $request with POST method
 });
 
-Route::delete( '/api/test', function ($request) {
+Route::delete('/api/test', function ($request) {
 	// do something with $request with DELETE method
 });
 
-Route::put( '/api/test', function ($request) {
+Route::put('/api/test', function ($request) {
 	// do something with $request with PUT method
 });
 
-Route::patch( '/api/test', function ($request) {
+Route::patch('/api/test', function ($request) {
 	// do something with $request with PATCH method
 });
 
-Route::option( '/api/test', function ($request) {
+Route::option('/api/test', function ($request) {
 	// do something with $request with OPTION method
 });
 ```

@@ -1,26 +1,26 @@
 <?php
 
-Route::get( '/api/test', function ($request) {
+Route::get('/api/test', function ($request) {
 	announce($request);
 });
 
-Route::post( '/api/test', function ($request) {
+Route::post('/api/test', function ($request) {
 	announce($request);
 });
 
-Route::delete( '/api/test', function ($request) {
+Route::delete('/api/test', function ($request) {
 	announce($request);
 });
 
-Route::put( '/api/test', function ($request) {
+Route::put('/api/test', function ($request) {
 	announce($request);
 });
 
-Route::patch( '/api/test', function ($request) {
+Route::patch('/api/test', function ($request) {
 	announce($request);
 });
 
-Route::option( '/api/test', function ($request) {
+Route::option('/api/test', function ($request) {
 	announce($request);
 });
 
