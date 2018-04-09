@@ -20,6 +20,8 @@ Route::patch( '/api/test', function ($request) {
 	announce($request);
 });
 
+
+
 function announce($request) {
 	echo 'Path is ' . $request->uri . '<br>';
 	echo 'Method is ' . $request->method . '<br>';
