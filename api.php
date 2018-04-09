@@ -1,7 +1,5 @@
 <?php
 
-use Me\Route;
-
 Route::get( '/api/test', function ($request) {
 	announce($request);
 });

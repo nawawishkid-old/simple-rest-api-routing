@@ -1,8 +1,5 @@
 <?php
 
-namespace Me;
-
-
 trait Singleton
 {
 	public static function singleton() 

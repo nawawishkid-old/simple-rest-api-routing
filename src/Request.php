@@ -1,7 +1,5 @@
 <?php
 
-namespace Me;
-
 class Request
 {
 	use Singleton;
