@@ -20,6 +20,10 @@ Route::patch( '/api/test', function ($request) {
 	announce($request);
 });
 
+Route::option( '/api/test', function ($request) {
+	announce($request);
+});
+
 
 
 function announce($request) {

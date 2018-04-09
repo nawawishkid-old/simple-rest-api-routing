@@ -44,6 +44,11 @@ class Route
 	{
 		self::enqueueAction('PATCH', $path, $callback);
 	}
+	
+	public static function option($path, $callback)
+	{
+		self::enqueueAction('OPTION', $path, $callback);
+	}
 
 	private static function enqueueAction($method, $path, $callback)
 	{
