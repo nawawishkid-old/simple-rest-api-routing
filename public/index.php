@@ -1,5 +1,10 @@
 <?php
 
-require_once '../bootstrap.php';
+// Vendors
+require_once '../vendor/autoload.php';
 
-Route::run( Request::singleton() );
+// Setup
+require_once '../api.php';
+
+// App
+require_once '../app.php';

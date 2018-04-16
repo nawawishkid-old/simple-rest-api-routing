@@ -8,11 +8,11 @@ class Request
 	private $method;
 	private $uri;
 
-	private function __construct()
+	public function __construct(array $args)
 	{
-		$this->method = $_SERVER['REQUEST_METHOD'];
-		$this->uri = $_SERVER['REQUEST_URI'];
-		$this->queryString = $_SERVER['QUERY_STRING'];
+		$this->method = strtoupper($args['method']);
+		$this->uri = $args['uri'];
+		$this->queryString = $args['query_string'];
 	}
 
 	public function __get($name)

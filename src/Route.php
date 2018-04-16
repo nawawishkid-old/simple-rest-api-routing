@@ -14,10 +14,12 @@ class Route
 	{
 		$uri = $request->uri;
 
-		if (! in_array($uri, array_keys(self::${$request->method})))
-			return;
+		if (! in_array($uri, array_keys(self::${$request->method}))) {
+			throw new Exception(sprintf('"%s" is not a valid method', $request->method));
+		}
 
 		self::${$request->method}[$uri]($request);
+		return true;
 	}
 
 	public static function get($path, $callback)
@@ -50,9 +52,15 @@ class Route
 		self::enqueueAction('OPTION', $path, $callback);
 	}
 
-	private static function enqueueAction($method, $path, $callback)
+	private static function enqueueAction(string $method, string $path, callable $callback)
 	{
-		self::${strtoupper($method)}[$path] = $callback;
+		$method = strtoupper($method);
+
+		if (! in_array($method, ['GET', 'POST', 'DELETE', 'PUT', 'PATCH', 'OPTION'])) {
+			throw new InvalidArgumentException(sprintf('"%s" is not a valid method', $method));
+		}
+
+		self::${$method}[$path] = $callback;
 	}
 }
 
